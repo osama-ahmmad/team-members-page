@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  --background: #09111f;
+  --surface: rgba(17, 28, 48, 0.9);
+  --header: rgba(28, 44, 73, 0.8);
+  --text: #f3f7ff;
+  --muted: #91a3c0;
+  --line: rgba(147, 170, 207, 0.2);
+  --cyan: #61e5d1;
+  --blue: #729dff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(61, 111, 185, 0.22), transparent 28rem),
+    radial-gradient(circle at 90% 100%, rgba(26, 139, 142, 0.14), transparent 25rem),
+    var(--background);
+  color: var(--text);
+  font-family: "DM Sans", sans-serif;
+}
+
+.page {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding-top: clamp(60px, 15vh, 150px);
+}
+
+h1 {
+  margin: 0 0 36px;
+  color: transparent;
+  background: linear-gradient(100deg, var(--cyan), var(--blue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  letter-spacing: -0.05em;
+  line-height: 1.05;
+  text-align: center;
+}
+
+.instructor {
+  margin: -18px 0 36px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  border-spacing: 0;
+  background: var(--surface);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+caption {
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+th,
+td {
+  padding: 20px 24px;
+}
+
+th {
+  background: var(--header);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+td {
+  border-top: 1px solid var(--line);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+td:last-child {
+  color: var(--cyan);
+  font-family: monospace;
+  letter-spacing: 0.08em;
+}
+
+tbody tr {
+  transition: background 180ms ease;
+}
+
+tbody tr:hover {
+  background: rgba(97, 229, 209, 0.06);
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 16px;
+  }
+
+  th,
+  td {
+    padding: 16px;
+  }
+}
